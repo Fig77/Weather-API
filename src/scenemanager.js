@@ -6,10 +6,15 @@ const sceneManager = (function factory() {
     }
   };
   
-  function addSingle(element) {
+  function addSingle(element, push = true) {
     const elementData = element.getData();
+    console.log(element);
     const container = document.getElementById(elementData.parentId);
-    container.appendChild(element);
+    if (push) {
+      container.appendChild(element.getElement());
+    } else {
+      container.insertAdjacentElement('afterBegin', element.getElement());
+    }
   }
 
   function addElements(element) {
@@ -28,8 +33,10 @@ const sceneManager = (function factory() {
   }
 
   return {
-    addElement,
+    addSingle,
+    addElements,
     clear,
   };
 }());
+
 export default sceneManager;

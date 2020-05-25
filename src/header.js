@@ -1,6 +1,27 @@
-import './element';
+import eleM from './element';
+import sm from './scenemanager';
+import {
+  github,
+} from './svg';
 
-const header = () => {
-  const container = Element('header', 'body', 'd-flex justify-c-center align-i-center');
-  
+
+const header = (() => {
+  const containerElement = eleM('header', 'body', '');
+  containerElement.setId('header-nav');
+  const createHeader = () => {
+    sm.addSingle(containerElement, false);
+    let container = document.getElementById('header-nav');
+    console.log(github);
+    container.insertAdjacentHTML('afterBegin', github);
+  };
+
+
+  return {
+    createHeader
+  };
+})();
+
+export {
+  header as
+  default,
 };

@@ -1,15 +1,12 @@
-body {
-  background-color: #fafafa;
-}
+@import 'grid.css';
 
-.header {
-  
+body {
+  margin: 0;
+  background-color: #fafafa;
+  height: 100vh;
 }
 
 .main {
   height: 80vh;
-}
-
-.git {
-  
+  width: 80vw;
 }
