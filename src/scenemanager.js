@@ -19,7 +19,6 @@ const sceneManager = (function factory() {
   function addElements(element) {
     let i = 0;
     while (i < element.length) {
-      console.log(i);
       let data = element[i].getData();
       let tempParent = document.getElementById(data.parentId);
       tempParent.appendChild(element[i].getElement());

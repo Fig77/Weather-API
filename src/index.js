@@ -3,4 +3,4 @@ import h from './header';
 import search from './searchbar.js';
 
 h.createHeader();
-search.drawSearch();
+search.initSearchBar();
