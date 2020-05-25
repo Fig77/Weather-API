@@ -6,12 +6,11 @@ import {
 
 
 const header = (() => {
-  const containerElement = eleM('header', 'body', '');
+  const containerElement = eleM('header', 'body');
   containerElement.setId('header-nav');
   const createHeader = () => {
     sm.addSingle(containerElement, false);
     let container = document.getElementById('header-nav');
-    console.log(github);
     container.insertAdjacentHTML('afterBegin', github);
   };
 

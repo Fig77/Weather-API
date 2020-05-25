@@ -9,4 +9,5 @@ body {
 .main {
   height: 80vh;
   width: 80vw;
+  flex-grow: 0;
 }
