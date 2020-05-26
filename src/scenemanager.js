@@ -5,7 +5,7 @@ const sceneManager = (function factory() {
       contain.firstChild.remove();
     }
   };
-  
+
   function addSingle(element, push = true) {
     const elementData = element.getData();
     const container = document.getElementById(elementData.parentId);
@@ -14,9 +14,10 @@ const sceneManager = (function factory() {
       element.setPlaced();
     } else {
       container.insertAdjacentElement('afterBegin', element.getElement());
+      element.setPlaced();
     }
   }
-  
+
   function addSibilings(element) {
     let originalId = element.getData().id;
     let inner = element.getData().inner;

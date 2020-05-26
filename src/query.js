@@ -4,6 +4,7 @@ const queryWeather = (() => {
   //httplink
   const http = 'https://api.openweathermap.org/data/2.5/weather?q=';
   const apiKey = '&appid=8a337fa287e25404c5043b8a8eb17d4a';
+  const defaultUnit = 'metric';
   //searchbar elements
   const containerSearch = eleM('div', 'main', 'd-flex flex-grow-0', 'containerSearch');
   const searchBar = eleM('input', 'containerSearch', 'searchbar');
@@ -29,10 +30,16 @@ const queryWeather = (() => {
   const drawResult = (data) => {
     sm.addElements([resultContainer, divHeader, location, infoUl, liData]);
     location.getPlaced().innerHTML = `${data.name}`;
+    const mainArray = liData.getPlaced();
+    let i = 0;
+    for (var key in data.main) {
+      mainArray[i].innerHTML = `${mainArray[i].innerHTML} ${data.main[key]}`
+      i += 1;
+    }
   };
 
   const querySearch = (city, country) => {
-    fetch(`${http}${city},${country}${apiKey}`, {
+    fetch(`${http}${city},${country}${apiKey}&units=${defaultUnit}`, {
         mode: 'cors'
       })
       .then(function (response) {
