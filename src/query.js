@@ -58,7 +58,8 @@ const queryWeather = (() => {
   const buttonInit = () => {
     const buttonSearch = document.getElementById('buttonsearch');
     buttonSearch.addEventListener('click', function () {
-      querySearch('Santa Fe', 'Argentina')
+      let value = searchBar.getPlaced().value.trim().split(',');
+      querySearch(value[0],value[1]);
     });
   };
 
