@@ -1,4 +1,5 @@
-const eleM = (name='div', parentId='main', classlist='', twinbrothers='', id='', inner='') => {
+const eleM = (name='div', parentId='main', classlist='', id='', twinbrothers=0, inner='') => {
+  let placeElement = null;
   const getElement = () => {
     const tempElement = document.createElement(name);
     tempElement.classList = classlist;
@@ -15,7 +16,17 @@ const eleM = (name='div', parentId='main', classlist='', twinbrothers='', id='',
     return {name, parentId, classlist, twinbrothers, id, inner};
   }
   
-  return {getElement, getData, setId};
+  const setPlaced = () => {
+    if (document.getElementById(id)) {
+      placeElement = document.getElementById(id);
+     }
+  };
+  
+  const getPlaced = () => {
+    return placeElement;
+  };
+  
+  return {getElement, getData, setId, setPlaced, getPlaced};
 };
 
 export {

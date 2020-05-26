@@ -11,6 +11,7 @@ const sceneManager = (function factory() {
     const container = document.getElementById(elementData.parentId);
     if (push) {
       container.appendChild(element.getElement());
+      element.setPlaced();
     } else {
       container.insertAdjacentElement('afterBegin', element.getElement());
     }
@@ -19,9 +20,7 @@ const sceneManager = (function factory() {
   function addElements(element) {
     let i = 0;
     while (i < element.length) {
-      let data = element[i].getData();
-      let tempParent = document.getElementById(data.parentId);
-      tempParent.appendChild(element[i].getElement());
+      addSingle(element[i]);
       i += 1;
     }
   }

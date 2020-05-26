@@ -14,7 +14,6 @@ const header = (() => {
     container.insertAdjacentHTML('afterBegin', github);
   };
 
-
   return {
     createHeader
   };
