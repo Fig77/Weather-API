@@ -1147,6 +1147,9 @@
 .justify-c-center {
   justify-content: center; }
 
+.justify-c-between {
+  justify-content: space-between; }
+
 .align-i-center {
   align-items: center; }
 

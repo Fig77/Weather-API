@@ -26,6 +26,13 @@ ul {
   padding: 0;
 }
 
+li {
+  border-bottom: solid;
+  border-color: #212121;
+  padding: 2px;
+  font-size: 20px;
+}
+
 .main {
   height: 75vh;
   padding: 3%;

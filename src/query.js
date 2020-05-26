@@ -20,7 +20,7 @@ const queryWeather = (() => {
   const location = eleM('h1', 'd-header', 'h1-title', 'header-1');
   const infoUl = eleM('ul', 'rcont', '', 'ul-info');
   const mainTemp = ['Temperature: ', 'Feel: ', 'Min: ', 'Max: ', 'Pressure: ', 'Humidity: '];
-  const liData = eleM('li', 'ul-info', 'li-data', 'li-data', 6, mainTemp);
+  const liData = eleM('li', 'ul-info', 'li-data d-flex justify-c-between', 'li-data', 6, mainTemp);
   const imgLink = eleM('img', 'd-header', 'img-style');
 
   const drawSearch = () => {
@@ -40,7 +40,7 @@ const queryWeather = (() => {
     const mainArray = liData.getPlaced();
     let i = 0;
     for (var key in data.main) {
-      mainArray[i].innerHTML = `${mainArray[i].innerHTML} ${data.main[key]}`
+      sm.addSingle(eleM('span', mainArray[i].id, 'li-span', `span-${i}`, 0,`${data.main[key]}`));
       i += 1;
     }
   };
