@@ -13,11 +13,11 @@ const queryWeather = (() => {
   searchButton.setId('buttonsearch');
   //result display elements
   const resultContainer = eleM('div', 'main', 'd-flex flex-column results-cont', 'rcont');
-  const divHeader = eleM('div', 'rcont', 'd-flex', 'd-header');
+  const divHeader = eleM('div', 'rcont', '', 'd-header');
   const location = eleM('h1', 'd-header', 'h1-title', 'header-1');
   const infoUl = eleM('ul', 'rcont', '', 'ul-info');
   const mainTemp = ['Temperature: ', 'Feel: ', 'Min: ', 'Max: ', 'Pressure: ', 'Humidity: '];
-  const liData = eleM('ul', 'ul-info', 'li-data', 'li-', '6', mainTemp);
+  const liData = eleM('li', 'ul-info', 'li-data', 'li-data', 6, mainTemp);
 
   const drawSearch = () => {
     sm.addElements([containerSearch, searchBar, searchButton])
@@ -27,7 +27,7 @@ const queryWeather = (() => {
   };
 
   const drawResult = (data) => {
-    sm.addElements([resultContainer, divHeader, location, infoUl]);
+    sm.addElements([resultContainer, divHeader, location, infoUl, liData]);
     location.getPlaced().innerHTML = `${data.name}`;
   };
 

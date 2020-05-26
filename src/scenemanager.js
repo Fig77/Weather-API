@@ -16,11 +16,21 @@ const sceneManager = (function factory() {
       container.insertAdjacentElement('afterBegin', element.getElement());
     }
   }
+  
+  function addSibilings(element) {
+    let originalId = element.getData().id;
+    let inner = element.getData().inner;
+    for (let i = 0; i < element.getData().twinbrothers; i++) {
+      element.setId(`${originalId}-${i}`);
+      element.setInner(`${inner[i]}`);
+      addSingle(element);
+    }
+  };
 
   function addElements(element) {
     let i = 0;
     while (i < element.length) {
-      addSingle(element[i]);
+      (element[i].getData().twinbrothers === 0) ? addSingle(element[i]) : addSibilings(element[i]);
       i += 1;
     }
   }
