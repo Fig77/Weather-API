@@ -43,7 +43,7 @@ ul {
 
 .results-cont {
   flex-grow: 0;
-  background-color: rgba()
+  width: 325px;
 }
 
 .searchbar {
@@ -67,4 +67,9 @@ button {
 
 button:hover {
   cursor: pointer;
+}
+
+.img-style {
+  -webkit-user-select: none;
+   margin: auto;
 }

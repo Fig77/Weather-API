@@ -4,22 +4,24 @@ const queryWeather = (() => {
   //httplink
   const http = 'https://api.openweathermap.org/data/2.5/weather?q=';
   const apiKey = '&appid=8a337fa287e25404c5043b8a8eb17d4a';
+  let weather = '10d';
   const defaultUnit = 'metric';
   //searchbar elements
   const containerSearch = eleM('div', 'main', 'd-flex flex-grow-0', 'containerSearch');
   const searchBar = eleM('input', 'containerSearch', 'searchbar');
   const searchButton = eleM('button', 'containerSearch', 'd-flex flex-grow-0 flex-column align-i-center justify-c-center');
-  const lupa = eleM('i','buttonsearch', 'fa fa-search');
+  const lupa = eleM('i', 'buttonsearch', 'fa fa-search');
   containerSearch.setId('containerSearch');
   searchBar.setId('searchbar');
   searchButton.setId('buttonsearch');
   //result display element
   const resultContainer = eleM('div', 'main', 'd-flex flex-column results-cont', 'rcont');
-  const divHeader = eleM('div', 'rcont', '', 'd-header');
+  const divHeader = eleM('div', 'rcont', 'd-flex flex-grow-0 justify-c-between', 'd-header');
   const location = eleM('h1', 'd-header', 'h1-title', 'header-1');
   const infoUl = eleM('ul', 'rcont', '', 'ul-info');
   const mainTemp = ['Temperature: ', 'Feel: ', 'Min: ', 'Max: ', 'Pressure: ', 'Humidity: '];
   const liData = eleM('li', 'ul-info', 'li-data', 'li-data', 6, mainTemp);
+  const imgLink = eleM('img', 'd-header', 'img-style');
 
   const drawSearch = () => {
     sm.addElements([containerSearch, searchBar, searchButton, lupa])
@@ -28,8 +30,12 @@ const queryWeather = (() => {
     elesearchBar.type = 'text';
   };
 
+  const softClear = () => {
+    // clean data here.
+  };
+
   const drawResult = (data) => {
-    sm.addElements([resultContainer, divHeader, location, infoUl, liData]);
+    sm.addElements([resultContainer, divHeader, location, infoUl, liData, imgLink]);
     location.getPlaced().innerHTML = `${data.name}`;
     const mainArray = liData.getPlaced();
     let i = 0;
@@ -59,7 +65,7 @@ const queryWeather = (() => {
     const buttonSearch = document.getElementById('buttonsearch');
     buttonSearch.addEventListener('click', function () {
       let value = searchBar.getPlaced().value.trim().split(',');
-      querySearch(value[0],value[1]);
+      querySearch(value[0], value[1]);
     });
   };
 
