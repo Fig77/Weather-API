@@ -28,6 +28,7 @@ const queryWeather = (() => {
     const elesearchBar = document.getElementById('searchbar');
     elesearchBar.placeholder = 'City, Country...';
     elesearchBar.type = 'text';
+    sm.addElements([resultContainer, divHeader, location, infoUl, liData, imgLink]);
   };
 
   const softClear = () => {
@@ -35,12 +36,15 @@ const queryWeather = (() => {
   };
 
   const drawResult = (data) => {
-    sm.addElements([resultContainer, divHeader, location, infoUl, liData, imgLink]);
     location.getPlaced().innerHTML = `${data.name}`;
     const mainArray = liData.getPlaced();
     let i = 0;
     for (var key in data.main) {
-      sm.addSingle(eleM('span', mainArray[i].id, 'li-span', `span-${i}`, 0,`${data.main[key]}`));
+      if (!document.getElementById(`span-${i}`)) {
+        sm.addSingle(eleM('span', mainArray[i].id, 'li-span', `span-${i}`, 0, `${data.main[key]}`));
+      } else {
+        document.getElementById(`span-${i}`).innerHTML = `${data.main[key]}`;
+      }
       i += 1;
     }
   };
@@ -72,6 +76,7 @@ const queryWeather = (() => {
   const initSearchBar = () => {
     drawSearch();
     buttonInit();
+    
   };
 
   return {

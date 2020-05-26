@@ -26,7 +26,6 @@ const eleM = (name = 'div', parentId = 'main', classlist = '', id = '', twinbrot
       } else {
         placeElement.push(document.getElementById(id));
       }
-
     }
   };
 
