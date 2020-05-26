@@ -8,11 +8,12 @@ const queryWeather = (() => {
   //searchbar elements
   const containerSearch = eleM('div', 'main', 'd-flex flex-grow-0', 'containerSearch');
   const searchBar = eleM('input', 'containerSearch', 'searchbar');
-  const searchButton = eleM('button', 'containerSearch');
+  const searchButton = eleM('button', 'containerSearch', 'd-flex flex-grow-0 flex-column align-i-center justify-c-center');
+  const lupa = eleM('i','buttonsearch', 'fa fa-search');
   containerSearch.setId('containerSearch');
   searchBar.setId('searchbar');
   searchButton.setId('buttonsearch');
-  //result display elements
+  //result display element
   const resultContainer = eleM('div', 'main', 'd-flex flex-column results-cont', 'rcont');
   const divHeader = eleM('div', 'rcont', '', 'd-header');
   const location = eleM('h1', 'd-header', 'h1-title', 'header-1');
@@ -21,7 +22,7 @@ const queryWeather = (() => {
   const liData = eleM('li', 'ul-info', 'li-data', 'li-data', 6, mainTemp);
 
   const drawSearch = () => {
-    sm.addElements([containerSearch, searchBar, searchButton])
+    sm.addElements([containerSearch, searchBar, searchButton, lupa])
     const elesearchBar = document.getElementById('searchbar');
     elesearchBar.placeholder = 'City, Country...';
     elesearchBar.type = 'text';
