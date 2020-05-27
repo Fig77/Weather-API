@@ -59,7 +59,7 @@ const queryWeather = (() => {
   };
 
   const querySearch = (city, country) => {
-    if ((city !== undefined && country !== undefined)) {
+    if ((city !== undefined || country !== undefined)) {
       fetch(`${http}${city},${country}${apiKey}&units=${defaultUnit}`, {
         mode: 'cors',
       })
