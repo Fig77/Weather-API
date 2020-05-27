@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax, guard-for-in */
 import qr from './query';
 
 const htmlManipulation = (() => {
@@ -5,7 +6,7 @@ const htmlManipulation = (() => {
   const searchBar = document.getElementById('searchbar');
   const location = document.getElementById('header-1');
   const imgLink = document.getElementById('img-weather');
-  const value = '';
+  let value = '';
 
   const drawResult = (data) => {
     location.innerHTML = `${data.name}`;
@@ -24,7 +25,7 @@ const htmlManipulation = (() => {
   };
 
   function getData() {
-    const value = searchBar.value.trim().split(',');
+    value = searchBar.value.trim().split(',');
     qr.querySearch(value[0], value[1]).then((response) => {
       if (response.cod === 200) {
         drawResult(response);
@@ -49,7 +50,6 @@ const htmlManipulation = (() => {
   };
 
   const searchbarInit = () => {
-    const value = '';
     searchBar.addEventListener('keypress', (e) => {
       if (e.keyCode === 13) {
         getData();

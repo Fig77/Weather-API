@@ -82,3 +82,7 @@ button:hover {
   -webkit-user-select: none;
   margin: auto 0 auto 0;
 }
+
+.justify-c-between {
+  justify-content: space-between;
+}

@@ -12,6 +12,7 @@ const queryWeather = (function factory() {
       const response = await raw.json();
       return response;
     }
+    return response;
   };
 
   const toggleUnit = () => {
@@ -21,8 +22,6 @@ const queryWeather = (function factory() {
       defaultUnit = 'metric';
     }
   };
-
-  const getResponse = (city, country) => querySearch(city, country).resolve();
 
   return {
     querySearch,
