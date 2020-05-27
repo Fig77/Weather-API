@@ -5,42 +5,7 @@ const htmlManipulation = (() => {
   const searchBar = document.getElementById('searchbar');
   const location = document.getElementById('header-1');
   const imgLink = document.getElementById('img-weather');
-  let value = '';
-
-  function getData() {
-    value = searchBar.value.trim().split(',');
-    qr.querySearch(value[0], value[1]).then((response) => {
-      if (response.cod === 200) {
-        drawResult(response);
-      }
-      else {
-        location.innerHTML = response.message;
-      }
-    });
-  };
-
-  const buttonInit = () => {
-    buttonSearch.addEventListener('click', () => {
-      getData()
-    });
-    document.querySelector('.onoffswitch-label').addEventListener('click', () => {
-      qr.toggleUnit();
-      qr.querySearch(value[0], value[1]).then((response) => {
-        if (response) {
-          drawResult(response);
-        }
-      });
-    });
-  };
-
-  const searchbarInit = () => {
-    let value = '';
-    searchBar.addEventListener('keypress', (e) => {
-      if (e.keyCode === 13) {
-        getData();
-      }
-    });
-  }
+  const value = '';
 
   const drawResult = (data) => {
     location.innerHTML = `${data.name}`;
@@ -53,9 +18,43 @@ const htmlManipulation = (() => {
       }
       i += 1;
       if (i === 6) {
-        break
+        break;
       }
     }
+  };
+
+  function getData() {
+    const value = searchBar.value.trim().split(',');
+    qr.querySearch(value[0], value[1]).then((response) => {
+      if (response.cod === 200) {
+        drawResult(response);
+      } else {
+        location.innerHTML = response.message;
+      }
+    });
+  }
+
+  const buttonInit = () => {
+    buttonSearch.addEventListener('click', () => {
+      getData();
+    });
+    document.querySelector('.onoffswitch-label').addEventListener('click', () => {
+      qr.toggleUnit();
+      qr.querySearch(value[0], value[1]).then((response) => {
+        if (response) {
+          drawResult(response);
+        }
+      });
+    });
+  };
+
+  const searchbarInit = () => {
+    const value = '';
+    searchBar.addEventListener('keypress', (e) => {
+      if (e.keyCode === 13) {
+        getData();
+      }
+    });
   };
 
   const init = () => {
@@ -66,7 +65,6 @@ const htmlManipulation = (() => {
   return {
     init,
   };
-
 })();
 
 export {
