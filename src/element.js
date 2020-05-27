@@ -4,10 +4,10 @@ const eleM = (name = 'div', parentId = 'main', classlist = '', id = '', twinbrot
   const getElement = () => {
     const tempElement = document.createElement(name);
     tempElement.classList = classlist;
-    tempElement.id = id
+    tempElement.id = id;
     tempElement.innerHTML = inner;
     return tempElement;
-  }
+  };
 
   // Sets
 
@@ -31,20 +31,16 @@ const eleM = (name = 'div', parentId = 'main', classlist = '', id = '', twinbrot
 
   // gets
 
-  const getData = () => {
-    return {
-      name,
-      parentId,
-      classlist,
-      id,
-      twinbrothers,
-      inner
-    };
-  }
+  const getData = () => ({
+    name,
+    parentId,
+    classlist,
+    id,
+    twinbrothers,
+    inner,
+  });
 
-  const getPlaced = () => {
-    return placeElement;
-  };
+  const getPlaced = () => placeElement;
 
   return {
     getElement,
@@ -52,7 +48,7 @@ const eleM = (name = 'div', parentId = 'main', classlist = '', id = '', twinbrot
     setId,
     setPlaced,
     getPlaced,
-    setInner
+    setInner,
   };
 };
 

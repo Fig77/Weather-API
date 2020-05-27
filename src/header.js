@@ -10,12 +10,12 @@ const header = (() => {
   containerElement.setId('header-nav');
   const createHeader = () => {
     sm.addSingle(containerElement, false);
-    let container = document.getElementById('header-nav');
+    const container = document.getElementById('header-nav');
     container.insertAdjacentHTML('afterBegin', github);
   };
 
   return {
-    createHeader
+    createHeader,
   };
 })();
 

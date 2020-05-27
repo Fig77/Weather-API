@@ -19,19 +19,21 @@ const sceneManager = (function factory() {
   }
 
   function addSibilings(element) {
-    let originalId = element.getData().id;
-    let inner = element.getData().inner;
-    for (let i = 0; i < element.getData().twinbrothers; i++) {
+    const originalId = element.getData().id;
+    const { inner } = element.getData();
+    for (let i = 0; i < element.getData().twinbrothers; i += 1) {
       element.setId(`${originalId}-${i}`);
       element.setInner(`${inner[i]}`);
       addSingle(element);
     }
-  };
+  }
 
   function addElements(element) {
     let i = 0;
     while (i < element.length) {
-      (element[i].getData().twinbrothers === 0) ? addSingle(element[i]) : addSibilings(element[i]);
+      if (element[i].getData().twinbrothers === 0) {
+        addSingle(element[i]);
+      } else { addSibilings(element[i]); }
       i += 1;
     }
   }

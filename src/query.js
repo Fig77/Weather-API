@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax, guard-for-in */
 import eleM from './element';
 import sm from './scenemanager';
 import {
@@ -5,11 +6,11 @@ import {
 } from './svg';
 
 const queryWeather = (() => {
-  //httplink
+  // httplink
   const http = 'https://api.openweathermap.org/data/2.5/weather?q=';
   const apiKey = '&appid=8a337fa287e25404c5043b8a8eb17d4a';
   let defaultUnit = 'fahrenheit';
-  //searchbar elements
+  // searchbar elements
   const containerSearch = eleM('div', 'main', 'd-flex flex-grow-0', 'containerSearch');
   const searchBar = eleM('input', 'containerSearch', 'searchbar');
   const searchButton = eleM('button', 'containerSearch', 'd-flex flex-grow-0 flex-column align-i-center justify-c-center');
@@ -17,7 +18,7 @@ const queryWeather = (() => {
   containerSearch.setId('containerSearch');
   searchBar.setId('searchbar');
   searchButton.setId('buttonsearch');
-  //result display element
+  // result display element
   const resultContainer = eleM('div', 'main', 'd-flex flex-column results-cont', 'rcont');
   const divHeader = eleM('div', 'rcont', 'd-flex flex-grow-0 justify-c-between', 'd-header');
   const location = eleM('h1', 'd-header', 'h1-title', 'header-1', 0, '');
@@ -29,13 +30,13 @@ const queryWeather = (() => {
   const divSwitch = eleM('div', 'main', 'onoffswitch', 'd-switch');
 
   const drawSearch = () => {
-    sm.addElements([containerSearch, searchBar, searchButton, lupa])
+    sm.addElements([containerSearch, searchBar, searchButton, lupa]);
     const elesearchBar = document.getElementById('searchbar');
     elesearchBar.placeholder = 'Enter: City, Country';
     elesearchBar.type = 'text';
     sm.addElements([resultContainer, divHeader, location, infoUl, liData, imgLink]);
     sm.addSingle(divSwitch);
-    searchBar.getPlaced().autocomplete = "off";
+    searchBar.getPlaced().autocomplete = 'off';
     divSwitch.getPlaced().insertAdjacentHTML('afterBegin', lazy);
   };
 
@@ -43,15 +44,15 @@ const queryWeather = (() => {
     location.getPlaced().innerHTML = `${data.name}`;
     const mainArray = liData.getPlaced();
     let i = 0;
-    for (var key in data.main) {
+    for (const key in data.main) {
       if (!document.getElementById(`span-${i}`)) {
         sm.addSingle(eleM('span', mainArray[i].id, 'li-span', `span-${i}`, 0, `${data.main[key]}`));
       } else {
         document.getElementById(`span-${i}`).innerHTML = `${data.main[key]}`;
       }
-      imgLink.getPlaced().src = `https://openweathermap.org/img/wn/${data.weather[0]['icon']}.png`;
+      imgLink.getPlaced().src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
       if (i < 4) {
-        document.getElementById(`span-${i}`).innerHTML += `&nbsp;°`;
+        document.getElementById(`span-${i}`).innerHTML += '&nbsp;°';
       }
       i += 1;
     }
@@ -60,25 +61,21 @@ const queryWeather = (() => {
   const querySearch = (city, country) => {
     if ((city !== undefined && country !== undefined)) {
       fetch(`${http}${city},${country}${apiKey}&units=${defaultUnit}`, {
-          mode: 'cors'
-        })
-        .then(function (response) {
-          return response.json();
-        })
-        .then(function (data) {
-          const items = data;
+        mode: 'cors',
+      })
+        .then((response) => response.json())
+        .then((data) => {
           drawResult(data);
         })
-        .catch(function (err) {
-          console.log(err);
+        .catch(() => {
         });
-    };
+    }
   };
 
   const buttonInit = () => {
     const buttonSearch = document.getElementById('buttonsearch');
     let value = '';
-    buttonSearch.addEventListener('click', function () {
+    buttonSearch.addEventListener('click', () => {
       value = searchBar.getPlaced().value.trim().split(',');
       querySearch(value[0], value[1]);
     });
@@ -88,7 +85,7 @@ const queryWeather = (() => {
         querySearch(value[0], value[1]);
       }
     });
-    document.querySelector('.onoffswitch-label').addEventListener('click', function () {
+    document.querySelector('.onoffswitch-label').addEventListener('click', () => {
       if (defaultUnit === 'metric') {
         defaultUnit = 'fahrenheit';
       } else {
@@ -101,7 +98,6 @@ const queryWeather = (() => {
   const initSearchBar = () => {
     drawSearch();
     buttonInit();
-    search();
   };
 
   return {
@@ -111,5 +107,5 @@ const queryWeather = (() => {
 
 export {
   queryWeather as
-  default
+  default,
 };
