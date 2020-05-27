@@ -19,6 +19,7 @@ header {
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
+
 h3 {
   padding-left: 5px;
 }
@@ -31,7 +32,7 @@ ul {
 li {
   border-bottom: solid;
   border-color: #212121;
-  padding: 2px;
+  padding: 4px;
   font-size: 20px;
 }
 
@@ -80,5 +81,5 @@ button:hover {
 
 .img-style {
   -webkit-user-select: none;
-   margin: auto;
+   margin: auto 0 auto 0;
 }

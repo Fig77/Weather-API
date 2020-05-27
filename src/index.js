@@ -3,8 +3,9 @@ import h from './header';
 import search from './query.js';
 
 const init = () => {
-  h.createHeader(); 
+  h.createHeader();
   search.initSearchBar();
-}
+};
+
 
 window.onload = init();
