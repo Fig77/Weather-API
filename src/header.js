@@ -6,7 +6,7 @@ import {
 
 
 const header = (() => {
-  const containerElement = eleM('header', 'body', 'd-flex align-i-center justify-c-center');
+  const containerElement = eleM('header', 'body', 'd-flex align-i-center justify-c-center header');
   containerElement.setId('header-nav');
   const createHeader = () => {
     sm.addSingle(containerElement, false);
