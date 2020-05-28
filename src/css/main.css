@@ -1,15 +1,88 @@
+@import "grid.css";
+@import "switch.css";
+
 body {
+  margin: 0;
   background-color: #fafafa;
+  height: 100vh;
+  font-family: "Fira Sans", sans-serif;
 }
 
-.header {
-  
+header {
+  width: 100%;
+  height: 8vh;
+  background-color: #8bc34a;
+  position: absolute;
+  top: 0;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+h3 {
+  padding-left: 5px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  border-bottom: solid;
+  border-color: #212121;
+  padding: 4px;
+  font-size: 20px;
 }
 
 .main {
-  height: 80vh;
+  height: 75vh;
+  padding: 3%;
+  width: 80vw;
+  flex-grow: 0;
 }
 
-.git {
-  
+.flex-grow-0 {
+  flex-grow: 0;
+}
+
+.d-none {
+  display: none;
+}
+
+.results-cont {
+  flex-grow: 0;
+  width: 325px;
+}
+
+.searchbar {
+  height: 35px;
+  width: 300px;
+  border: 1px solid white;
+  border-bottom-color: #212121;
+  font-size: 25px;
+}
+
+.searchbar:focus {
+  outline: #8bc34a auto 1px;
+  border-style: none;
+}
+
+button {
+  background-color: #fafafa;
+  border-style: none;
+  font-size: 23px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.img-style {
+  -webkit-user-select: none;
+  margin: auto 0 auto 0;
+}
+
+.justify-c-between {
+  justify-content: space-between;
 }

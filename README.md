@@ -1,61 +1,85 @@
-# To-Do list
-
-Javascript project involving concepts of OOP design implemented on managing a list of To-Do.
-Original specifications for this project can be found [here](https://www.theodinproject.com/courses/javascript/lessons/todo-list).
-<br>
-<br>
-<strong>Current functions implemented involves: </strong>
-* Creating projects that hold ToDos
-* Creating and deleting ToDos
-* Editing Title-Notes-Description of ToDos
-
-## Live demo
-
-[Live website](https://haddadsohaib.github.io/todo/)
-
-### Usage
-
-If you want to test and use this project, you need to do:
-* `$ git clone https://github.com/HADDADSOHAIB/todo.git`
-
-and after that
-
-* `$ git checkout init_commit`
-
-after that you need to run the bundler
-* `$ npm install`
-
-and open your files with live server or similar
-
-## Built With
-
-- bootstrap
-- CSS
-- HTML
-- JavaScript
-- Webpack
+[![Contributors][contributors-shield]][contributors-url]
+[![Issues][issues-shield]][issues-url]
+<br />
+<p align="center">
+  <img src="rest.png" alt="menu" width="718" height="394">
+  <h2 align="center">Weather App</h2>
+  <p align="center">
+  	Javascript Project
+    <br />
+    <a href="https://github.com/Fig77/weather-ap"><strong>Explore the docs »</strong></a>
+    <br />
+</p>
 
 
-## Authors
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
 
-👤 **HADDAD SOHAIB**
+* [About the Project](#about-the-project)
+  * [Built With](#built-with)
+* [Installation](#installation-and-setup)
+	* [Requirements](#perquisites)
+* [Live Version](#live-version-and-usage)
+* [Roadmap](#roadmap)
+* [License](#license)
+* [Contact](#contact)
 
-- Github: [@HADDADSOHAIB](https://github.com/HADDADSOHAIB)
-- Twitter: [@HaddadSohaib](https://twitter.com/HaddadSohaib)
-- Linkedin: [linkedin](https://www.linkedin.com/in/sohaibhaddad/)
 
-👤 **Facundo Iglesias**
+<!-- ABOUT THE PROJECT -->
+## About The Project 
+Project is a simple web app that should display information about weather of a given input. Requirements can be seen
+[here](https://www.theodinproject.com/courses/javascript/lessons/weather-app)
 
-- Github: [@Fig77](https://github.com/Fig77)
-- Twitter: [@Fig77](https://twitter.com/Fig_77/)
-- Linkedin: [linkedin](https://www.linkedin.com/in/figlesias/)
+### Objective
+Main objective of project is to put into use concepts of ES6, Webpack, and working with API using javascript.
 
-## 🤝 Contributing
+### Built With
+This project was built with: 
+* Javascript
+* ESlint
+* Webpack
+* SASS (for grid structure)
+* HTML/CSS
+* openweather API
 
-Contributions, issues and feature requests are welcome!
+### Prerequisites
+ The development environment uses `HTML/CSS | JS | Webpack`. Installation of Webpack is quite necessary for working in development enviroment.
+  - Webpack - Follow [this guide](https://webpack.js.org/guides/installation/).
+  
+### Installation and setup
+1. You can download the zip project clicking [here](https://github.com/Fig77/weather-ap.git) or you can clone the project using the command - git clone <https://github.com/Fig77/weather-ap.git>
+2. Use the folowwing commands: 
 
-Feel free to check the [issues page](issues/).
+- `$ npm install` For installing dependencies.
+- `$ npm run build` Will build src into dist.
+- `$ npm run dev` Will let --watch working while developing.
 
-## Show your support
+3. Work as normal with HTML/CSS - JS editor.
 
-Give a ⭐️ if you like this project!
+### Live Version and Usage
+
+* Current live version [here](https://fig77.github.io/weather-api/)
+* Write a location in the searchbar, and press enter or the search img.
+* Input can take several formats, but the one recomended is 'City, Country'.
+* You can switch from celsius to fahrenheit by clicking the switch button below. No need to redo the search.
+
+<!-- ROADMAP -->
+
+## Roadmap
+
+See the [open issues ](https://github.com/Fig77/weather-ap/issues)for a list of proposed features (and known issues).
+
+<!-- CONTACT -->
+## Contact
+
+Facundo Iglesias - [Github profile](https://github.com/Fig77)
+
+Project Link: - [Project repo](https://github.com/Fig77/weather-ap)
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/badge/Contributors-1-brightgreen
+[contributors-url]: https://github.com/Fig77/weather-ap/graphs/contributors
+[issues-shield]: https://img.shields.io/badge/issues-0-%2300ff00
+[issues-url]: https://github.com/Fig77/weather-ap/issues
+[product-screenshot]: assets/menu.png
