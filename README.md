@@ -31,16 +31,16 @@ Project is a simple web app that should display information about weather of a g
 [here](https://www.theodinproject.com/courses/javascript/lessons/weather-app)
 
 ### Objective
-Main objective of project is to put into use concepts of ES6, Webpack, and working with API using javascript.
+Main objective of project is to put into use concepts of ES6, Webpack, and working with API using JavaScript.
 
 ### Built With
 This project was built with: 
-* Javascript
+* JavaScript
 * ESlint
 * Webpack
 * SASS (for grid structure)
 * HTML/CSS
-* openweather API
+* Openweather API
 
 ### Prerequisites
  The development environment uses `HTML/CSS | JS | Webpack`. Installation of Webpack is quite necessary for working in development enviroment.
@@ -48,7 +48,7 @@ This project was built with:
   
 ### Installation and setup
 1. You can download the zip project clicking [here](https://github.com/Fig77/weather-ap.git) or you can clone the project using the command - git clone <https://github.com/Fig77/weather-ap.git>
-2. Use the folowwing commands: 
+2. Use the following commands: 
 
 - `$ npm install` For installing dependencies.
 - `$ npm run build` Will build src into dist.
@@ -61,7 +61,7 @@ This project was built with:
 * Current live version [here](https://fig77.github.io/weather-api/)
 * Write a location in the searchbar, and press enter or the search img.
 * Input can take several formats, but the one recomended is 'City, Country'.
-* You can switch from celsius to fahrenheit by clicking the switch button below. No need to redo the search.
+* You can switch from Celsius to Fahrenheit by clicking the switch button below. No need to redo the search.
 
 <!-- ROADMAP -->
 
@@ -75,6 +75,8 @@ See the [open issues ](https://github.com/Fig77/weather-ap/issues)for a list of 
 Facundo Iglesias - [Github profile](https://github.com/Fig77)
 
 Project Link: - [Project repo](https://github.com/Fig77/weather-ap)
+
+Email: <strong>fig.igle@gmail.com</strong>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
