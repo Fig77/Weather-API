@@ -75,3 +75,11 @@ See the [open issues ](https://github.com/Fig77/weather-ap/issues)for a list of 
 Facundo Iglesias - [Github profile](https://github.com/Fig77)
 
 Project Link: - [Project repo](https://github.com/Fig77/weather-ap)
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/badge/Contributors-1-brightgreen
+[contributors-url]: https://github.com/Fig77/weather-ap/graphs/contributors
+[issues-shield]: https://img.shields.io/badge/issues-0-%2300ff00
+[issues-url]: https://github.com/Fig77/weather-ap/issues
+[product-screenshot]: assets/menu.png
