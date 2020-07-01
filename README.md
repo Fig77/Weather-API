@@ -58,7 +58,7 @@ This project was built with:
 
 ### Live Version and Usage
 
-* Current live version [here](https://fig77.github.io/weather-api/)
+* Current live version [here](https://github.com/Fig77/Weather-API)
 * Write a location in the search bar, and press enter or the search link.
 * Input can take several formats, but the one recommended is 'City, Country'.
 * You can switch from Celsius to Fahrenheit by clicking the switch button below. No need to redo the search.
