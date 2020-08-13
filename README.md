@@ -11,24 +11,21 @@
     <br />
 </p>
 
-
-<!-- TABLE OF CONTENTS -->
-## Table of Contents
-
-* [About the Project](#about-the-project)
-  * [Built With](#built-with)
-* [Installation](#installation-and-setup)
-	* [Requirements](#perquisites)
-* [Live Version](#live-version-and-usage)
-* [Roadmap](#roadmap)
-* [License](#license)
-* [Contact](#contact)
-
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project 
 Project is a simple WebApp that should display information about the weather of a given input. Requirements can be seen
 [here](https://www.theodinproject.com/courses/javascript/lessons/weather-app)
+
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
+
+* [Built With](#built-with)
+* [Installation](#installation-and-setup)
+	* [Requirements](#perquisites)
+* [Live Version](#live-version-and-usage)
+* [Future improvements](#future-improvements)
+* [License](#license)
+* [Contact](#contact)
 
 ### Objective
 The main objective of this project is to put into use concepts of ES6, Webpack, and working with API using JavaScript.
@@ -65,7 +62,7 @@ This project was built with:
 
 <!-- ROADMAP -->
 
-## Roadmap
+## Future improvements
 
 See the [open issues ](https://github.com/Fig77/weather-ap/issues)for a list of proposed features (and known issues).
 
