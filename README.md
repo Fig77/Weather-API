@@ -12,8 +12,7 @@
 </p>
 
 <!-- ABOUT THE PROJECT -->
-Project is a simple WebApp that should display information about the weather of a given input. Requirements can be seen
-[here](https://www.theodinproject.com/courses/javascript/lessons/weather-app)
+This project is a WeatherApp that will take information out of [OpenWeather](https://openweathermap.org/) and displays it into this web application, based on a location input from the user.
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
