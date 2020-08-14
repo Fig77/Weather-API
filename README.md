@@ -65,11 +65,11 @@ This project was built with:
 See the [open issues ](https://github.com/Fig77/weather-ap/issues)for a list of proposed features (and known issues).
 
 <!-- CONTACT -->
-## Contact
+## Contact📱
 
-Facundo Iglesias - [Github profile](https://github.com/Fig77)
-
-Project Link: - [Project repo](https://github.com/Fig77/weather-ap)
+* Facundo Iglesias - [Github profile](https://github.com/Fig77)
+* Email - fig.igle@gmail.com
+* LinkedIn - linkedin.com/in/figlesias.com
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
