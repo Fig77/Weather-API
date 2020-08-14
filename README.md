@@ -12,7 +12,7 @@
 </p>
 
 <!-- ABOUT THE PROJECT -->
-This project is a WeatherApp that will take information out of [OpenWeather](https://openweathermap.org/) and displays it into this web application, based on a location input from the user.
+This project is a WeatherApp that will take information out of [OpenWeather](https://openweathermap.org/) and displays it into this web application, based on a location input from the user. Using JavaScript.
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
