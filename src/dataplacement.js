@@ -13,7 +13,8 @@ const htmlManipulation = (() => {
     let i = 0;
     for (const key in data.main) {
       document.getElementById(`span-${i}`).innerHTML = `${data.main[key]}`;
-      imgLink.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+      imgLink.src =
+        `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
       if (i < 4) {
         document.getElementById(`span-${i}`).innerHTML += '&nbsp;°';
       }

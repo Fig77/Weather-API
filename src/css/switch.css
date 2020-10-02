@@ -1,6 +1,7 @@
 .onoffswitch {
   position: relative;
   width: 90px;
+  margin-top: 20px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -45,14 +46,16 @@
 .onoffswitch-inner:before {
   content: "ºF";
   padding-left: 26px;
-  background-color: #8bc34a;
+  background-color: #007bff;
+  border-color: #007bff;
   color: #ffffff;
 }
 
 .onoffswitch-inner:after {
   content: "ºC";
   padding-right: 26px;
-  background-color: #8bc34a;
+  background-color: #007bff;
+  border-color: #007bff;
   color: #fafafa;
   text-align: right;
 }
@@ -64,7 +67,7 @@
   background: #ffffff;
   position: absolute;
   top: 0;
-  bottom: 0;
+  bottom: 8px;
   right: 56px;
   border: 2px solid #999999;
   border-radius: 20px;
