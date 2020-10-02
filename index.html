@@ -5,12 +5,13 @@
   <meta charset="UTF-8">
   <script src="https://use.fontawesome.com/c5d3dd4109.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather App</title>
 </head>
 
 <body class="d-flex flex-column justify-c-center align-i-center" id="body">
-  <header class="d-flex align-i-center justify-c-center header" id="header-nav">
+  <header class="d-flex align-i-center justify-c-center header bg-info" id="header-nav">
     <a href="https://github.com/Fig77/">
       <span>
         <svg class="gero" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -18,25 +19,25 @@
         </svg>
       </span>
     </a>
-    <h3>Weather API </h3>
+    <h3 class ="text-monospace m-0">Weather API </h3>
   </header>
   <main class="main d-flex flex-column align-i-center" id="main">
-    <div class="d-flex flex-grow-0" id="containerSearch"><input class="searchbar" id="searchbar" placeholder="Enter: City, Country" type="text" autocomplete="off">
-      <button class="d-flex flex-grow-0 flex-column align-i-center justify-c-center" id="buttonsearch"><i class="fa fa-search" id="" aria-hidden="true"></i>
+    <div class="d-flex flex-grow-0" id="containerSearch"><input class="form-control" id="searchbar" placeholder="Enter: City, Country" type="text" autocomplete="off">
+      <button class="d-flex d-hide flex-grow-0 flex-column align-i-center justify-c-center" id="buttonsearch"><i class="fa fa-search" id="" aria-hidden="true"></i>
       </button>
     </div>
     <div class="d-flex flex-column results-cont" id="rcont">
       <div class="d-flex flex-grow-0 justify-c-between" id="d-header">
         <h1 class="h1-title" id="header-1"></h1>
-        <img class="img-style" id="img-weather" src="https://openweathermap.org/img/wn/01d.png">
+        <img class="img-style" id="img-weather" src="">
       </div>
-      <ul class="" id="ul-info">
-        <li class="li-data d-flex justify-c-between" id="li-data-0">Temperature: <span class="li-span" id="span-0"></span></li>
-        <li class="li-data d-flex justify-c-between" id="li-data-1">Feel: <span class="li-span" id="span-1"></span></li>
-        <li class="li-data d-flex justify-c-between" id="li-data-2">Min: <span class="li-span" id="span-2"></span></li>
-        <li class="li-data d-flex justify-c-between" id="li-data-3">Max: <span class="li-span" id="span-3"></span></li>
-        <li class="li-data d-flex justify-c-between" id="li-data-4">Pressure: <span class="li-span" id="span-4"></span></li>
-        <li class="li-data d-flex justify-c-between" id="li-data-5">Humidity: <span class="li-span" id="span-5"></span></li>
+      <ul class="list-group" id="ul-info">
+        <li class="list-group-item active d-flex justicy-content-between" id="li-data-0">Temperature: <span class="li-span" id="span-0"></span></li>
+        <li class="list-group-item d-flex justicy-content-between" id="li-data-1">Feel: <span class="li-span" id="span-1"></span></li>
+        <li class="list-group-item d-flex justicy-content-between" id="li-data-2">Min: <span class="li-span" id="span-2"></span></li>
+        <li class="list-group-item d-flex justicy-content-between" id="li-data-3">Max: <span class="li-span" id="span-3"></span></li>
+        <li class="list-group-item d-flex justicy-content-between" id="li-data-4">Pressure: <span class="li-span" id="span-4"></span></li>
+        <li class="list-group-item d-flex justicy-content-between" id="li-data-5">Humidity: <span class="li-span" id="span-5"></span></li>
       </ul>
     </div>
     <div class="onoffswitch" id="d-switch">
