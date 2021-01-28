@@ -41,21 +41,27 @@ body {
   font-size: 8em;
   font-weight: 300;
   line-height: 0.75;
-  margin-right: 50px;
+  margin-right: 5px;
+}
+
+.tempbox {
+  margin-right: 45px;
+
 }
 
 .display {
   display: flex;
+  justify-content: space-around;
 }
 
 .button {
   height: 45px;
   margin: 1em 0 4em;
   padding: 0;
-  font: 400 1rem 'Roboto';
+  font: 400 1.1rem 'Roboto';
   letter-spacing: 0.025em;
   text-transform: uppercase;
-  color: white;
+  color: #FFFFFF;
   border: none;
 }
 
@@ -97,10 +103,12 @@ li {
   text-align: right;
 }
 
-.h3-title {
-  margin: 0;
-  margin-left: 24px;
+.li {
+ font-size: 14px;
+ color: rbg(255,255,255);
+ opacity: 0.5;
 }
+
 
 .main {
   width: 480px;
@@ -135,7 +143,7 @@ li {
 button {
   background-color: #fafafa;
   border-style: none;
-  font-size: 23px;
+  font-size: 26px;
   position: relative;
   left: 25px;
 }
