@@ -2,7 +2,7 @@
 [![Issues][issues-shield]][issues-url]
 <br />
 <p align="center">
-  <img src="Rest.png" alt="menu" width="688" height="394">
+  <img src="Rest.png" alt="menu" width="600" height="264">
   <h2 align="center">Weather App</h2>
   <p align="center">
   	JavaScript Project
@@ -54,7 +54,7 @@ This project was built with:
 
 ### Live Version and Usage
 
-* Current live version [here](https://github.com/Fig77/Weather-API)
+* Current live version [here](https://weathap1.netlify.app/)
 * Write a location in the search bar, and press enter or the search link.
 * Input can take several formats, but the one recommended is 'City, Country'.
 * You can switch from Celsius to Fahrenheit by clicking the switch button below. No need to redo the search.
