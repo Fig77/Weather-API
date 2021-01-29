@@ -2,7 +2,7 @@
 [![Issues][issues-shield]][issues-url]
 <br />
 <p align="center">
-  <img src="rest.png" alt="menu" width="688" height="394">
+  <img src="Rest.png" alt="menu" width="688" height="394">
   <h2 align="center">Weather App</h2>
   <p align="center">
   	JavaScript Project

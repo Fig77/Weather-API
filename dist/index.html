@@ -11,26 +11,31 @@
   <title>Weather App</title>
 </head>
 
-<body class="d-flex flex-column justify-c-center align-i-center" id="body">
+<body class="d-flex flex-column justify-c-center" id="body">
   <main class="main text">
     <search>
-     <form>
+     <h2 id='location' class='text'></h2>
+     <div class='searchform'> <!-- Aparently, there is a ducking problem with the form and certain http calls, i.e just a regular fetch to openweather api -->
+       <div class='inputs'>
         <input class='search transparent' id='searchbar' type='text' placeholder='ENTER CITY, COUNTRY' />
         <input class='button transparent' id='buttonsearch' type="submit" value='GO' />
-      </form>
-    </search>
-    <div class='display'>
-      <div class='d-flex tempbox'>
-        <img id='image-weather'></img>
-        <h1 class='text temp' id='span-0'>0</h1>
-  	<button id='switch' class='button transparent'>C | F</button>
-     </div>
-      
+       </div>
+      <div class='d-flex container-ul'>
       <ul class='text ul'>
         <li class='li' id='li-1'>Feel:  <span id='span-1'></span></li>
         <li class='li' id='li-2'>Humidity: <span id='span-2'></span></li>
         <li class='li' id='li-3'>Preassure: <span id='span-3'></span></li>
       </ul>
+
+       <img id='image-weather' class='img'></img>
+       </div>
+      </div>
+    </search>
+    <div class='display'>
+      <div class='d-flex tempbox'>
+        <h1 class='text temp' id='span-0'>0</h1>
+  	<button id='switch' class='button transparent'><span>C</span> | <span>F</span></button>
+      </div>
     </div>
   </main>
   <script src="./main.js"></script>

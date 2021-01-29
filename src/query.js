@@ -10,7 +10,6 @@ const queryWeather = (function factory() {
         mode: 'cors',
       });
       const response = await raw.json();
-      console.log(response);
       return response;
     }
     return response;
